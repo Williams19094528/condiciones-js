@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borde con onclick</title>
+    <style>
+      #imagen {
+        cursor: pointer;
+      }
+
+      .selected {
+        border: 20px solid red;
+      }
+
+      body {
+        text-align: center;
+        background-color: rgb(223, 208, 237);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Imagen con Borde</h1>
+    <img
+      class="selected"
+      id="imagen"
+      src="./fotos/playa.jpg"
+      width="800px"
+      alt="Imagen"
+      onclick="let imagen = document.querySelector('#imagen');   
+      if (imagen.classList.contains('selected')) { 
+        imagen.classList.remove('selected'); 
+      } else { 
+        imagen.classList.add('selected'); 
+      }"
+    />
+  </body>
+</html>

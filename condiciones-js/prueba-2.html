@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon stickers</title>
+    <style>
+      .sticker-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .sticker-container img {
+        width: 500px;
+        height: auto;
+      }
+      body {
+        background-color: rgb(201, 201, 239);
+        text-align: center;
+      }
+      h1 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pedido Pokemon Stickers</h1>
+
+    <div class="sticker-container">
+      <div>
+        <img src="./fotos/blastode.jpg" alt="Sticker 1" />
+        <input
+          type="number"
+          id="sticker1"
+          value="0"
+          min="0"
+          max="10"
+          alt="blastode"
+        />
+      </div>
+      <div>
+        <img src="/fotos/charizard.jpg" alt="Sticker 2" />
+        <input
+          type="number"
+          id="sticker2"
+          value="0"
+          min="0"
+          max="10"
+          alt="charizard"
+        />
+      </div>
+      <div>
+        <img src="./fotos/pikachu.jpg" alt="Sticker 3" />
+        <input
+          type="number"
+          id="sticker3"
+          value="0"
+          min="0"
+          max="10"
+          alt="pikachu"
+        />
+      </div>
+    </div>
+
+    <button
+      onclick="
+    let totalStickers = Number(document.getElementById('sticker1').value) +
+                        Number(document.getElementById('sticker2').value) +
+                        Number(document.getElementById('sticker3').value);
+    let resultado = document.getElementById('resultado');
+    if (totalStickers <= 10) {
+      resultado.textContent = 'Llevas ' + totalStickers + ' stickers.';
+    } else {
+      resultado.textContent = 'Llevas demasiados stickers.';
+    }
+  "
+    >
+      Calcular Pedido
+    </button>
+
+    <p id="resultado"></p>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificación de Password</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      background-color: rgb(201, 201, 239);
+      margin-top: 300px;
+    }
+  </style>
+  <body>
+    <h1>Verificación de Password</h1>
+
+    <select id="select1">
+      <option value="">Seleccione</option>
+      <option value="911">911</option>
+      <option value="714">714</option>
+      <option value="otro">Otro</option>
+    </select>
+
+    <select id="select2">
+      <option value="">Seleccione</option>
+      <option value="911">911</option>
+      <option value="714">714</option>
+      <option value="otro">Otro</option>
+    </select>
+
+    <select id="select3">
+      <option value="">Seleccione</option>
+      <option value="911">911</option>
+      <option value="714">714</option>
+      <option value="otro">Otro</option>
+    </select>
+
+    <button
+      onclick="
+    var password1 = document.getElementById('select1').value;
+    var password2 = document.getElementById('select2').value;
+    var password3 = document.getElementById('select3').value;
+    var resultado = document.getElementById('resultado');
+
+    if (password1 === '911' && password2 === '911' && password3 === '911') {
+      resultado.textContent = 'Password 1 correcto.';
+    } else if (password1 === '714' && password2 === '714' && password3 === '714') {
+      resultado.textContent = 'Password 2 correcto.';
+    } else {
+      resultado.textContent = 'Password incorrecto.';
+    }
+  "
+    >
+      <b>Ingresar</b>
+    </button>
+
+    <p id="resultado"></p>
+  </body>
+</html>
